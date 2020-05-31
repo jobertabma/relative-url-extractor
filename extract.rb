@@ -15,7 +15,7 @@ def sanitize_non_ascii(string)
     replace: '_',
   }
 
-  string.encode Encoding.find('ASCII'), encoding_options
+  string.encode(Encoding.find('ASCII'), **encoding_options)
 end
 
 matched_endpoints = []
