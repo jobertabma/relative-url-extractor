@@ -8,7 +8,7 @@ while (line = STDIN.gets)
   contents += line
 end
 
-REGEX = %r{(^.*?("|')(/[\w\d\?/&=\#\.\!:_-]*?)(\2).*$)}.freeze
+REGEX = %r{(^.*?("|')(/[\w\d\W\?/&=\#\.\!:_-]*?)(\2).*$)}.freeze
 EXCERPT_FORMAT = "------------------------------------------------\r\n%s\r\n"
 
 def sanitize_non_ascii(string)
